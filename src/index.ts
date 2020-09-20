@@ -1,15 +1,13 @@
 import express, { Request, Response } from 'express'
+import { router } from './routes/loginRoutes'
+import cookieSession from 'cookie-session'
 require('dotenv').config()
 
 const app = express()
 
-app.get('/', (req: Request, res: Response) => {
-  res.send(`
-    <div> 
-      <h1> Hello Express </h1> 
-    </div>
-  `)
-})
+app.use(express.urlencoded({ extended: true }))
+app.use(cookieSession({ keys: ['cookey'] }))
+app.use('/', router)
 
 const { PORT } = process.env
 app.listen(PORT, () => {
