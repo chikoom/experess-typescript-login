@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/chikoom/experess-typescript-login/issues"
   },
-  "homepage": "https://github.com/chikoom/experess-typescript-login#readme"
+  "homepage": "https://github.com/chikoom/experess-typescript-login#readme",
+  "dependencies": {
+    "@types/cookie-session": "^2.0.41",
+    "@types/express": "^4.17.8",
+    "cookie-session": "^1.4.0",
+    "express": "^4.17.1"
+  }
 }
